@@ -48,3 +48,20 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File setup-startmenu.ps1 -Ima
 ```
 
 Script tu upload len repo nay roi tro toi URL moi.
+
+
+## Search panel (Windows 11)
+
+Panel Search (bam Win + go) khong nhan video tu XAML-Video-Injector, nhung van
+dung duoc anh qua Start Menu Styler - target `Border#AppBorder` (khac voi
+`Border#AcrylicBorder` la Start menu):
+
+```json
+{
+  "controlStyles[0].target": "Border#AppBorder",
+  "controlStyles[0].styles[0]": "Background:=<ImageBrush Stretch=\"UniformToFill\" Opacity=\"1\" ImageSource=\"https://raw.githubusercontent.com/kh4i-dev/wallpapers/main/knight-search.jpg\" />"
+}
+```
+
+`knight-search.jpg` la anh tinh cat ra tu clip 15 giay trong repo
+[startmenu-live-bg](https://github.com/kh4i-dev/startmenu-live-bg).
